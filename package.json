@@ -1,0 +1,36 @@
+{
+  "name": "boston-interior",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Boston Interior — interior design & furniture portfolio website",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "sync": "node scripts/sync-layout.mjs",
+    "reveal": "node scripts/reveal.mjs",
+    "grade": "node scripts/grade.mjs",
+    "audit": "node scripts/audit.mjs",
+    "harvest": "node scripts/harvest.mjs"
+  },
+  "dependencies": {
+    "glightbox": "^3.3.1",
+    "jquery": "^3.7.1",
+    "lenis": "^1.3.26",
+    "swiper": "^11.2.10"
+  },
+  "devDependencies": {
+    "@types/jquery": "^3.5.32",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "sharp": "^0.35.5",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
+  },
+  "allowScripts": {
+    "esbuild@0.25.12": true
+  }
+}
