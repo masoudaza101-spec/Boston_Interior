@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bostoninterior.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://bostoninterior.com/about.html</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://bostoninterior.com/services.html</loc><changefreq>yearly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bostoninterior.com/portfolio.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://bostoninterior.com/furniture.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://bostoninterior.com/contact.html</loc><changefreq>yearly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://bostoninterior.com/about</loc><changefreq>yearly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bostoninterior.com/services</loc><changefreq>yearly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bostoninterior.com/portfolio</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://bostoninterior.com/furniture</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://bostoninterior.com/contact</loc><changefreq>yearly</changefreq><priority>1.0</priority></url>
 </urlset>

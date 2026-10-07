@@ -1,12 +1,7 @@
 import $ from "jquery";
 import Lenis from "lenis";
-import "lenis/dist/lenis.css";
 import Swiper from "swiper";
 import { Autoplay, EffectFade, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
-import "../css/tailwind.css";
 
 declare global {
   interface Window {
@@ -43,11 +38,14 @@ function initHeader(): void {
   update();
   $(window).on("scroll", update);
 
-  const page = location.pathname.split("/").pop() || "index.html";
+  const norm = (s: string): string => {
+    const v = s.split("#")[0].split("?")[0].replace(/\/$/, "");
+    return v === "" ? "/" : v;
+  };
+  const page = norm(location.pathname);
   $header.find(".nav-link").each(function () {
-    const href = $(this).attr("href") || "";
-    const target = href.split("#")[0];
-    if (target === page || (page === "" && target === "index.html")) {
+    const target = norm($(this).attr("href") || "");
+    if (target === page) {
       $(this).addClass("active");
     }
   });

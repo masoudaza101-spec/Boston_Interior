@@ -1,12 +1,21 @@
-import { readFileSync, writeFileSync } from "node:fs";
+import { readFileSync, writeFileSync, readdirSync, statSync } from "node:fs";
 
 // Remove hyphen/dash punctuation from visible copy.
 //   em dash  " — "  -> ", " mid-sentence, " · " in titles/captions/eyebrows
 //   en dash  ranges -> " to "
 //   compound words   -> spaced ("full-service" -> "full service")
-// Protects: inline scripts/styles, comments, attribute values, data-* tokens.
+// Protects: inline scripts/styles, JSX comments, template literals, attribute values, data-* tokens.
 
-const pages = ["index.html", "about.html", "services.html", "portfolio.html", "furniture.html", "contact.html"];
+const pages = [];
+function walk(dir) {
+  for (const name of readdirSync(dir)) {
+    const p = dir + "/" + name;
+    if (statSync(p).isDirectory()) walk(p);
+    else if (/\.tsx$/.test(name)) pages.push(p);
+  }
+}
+walk("app");
+walk("components");
 
 const PROTECTED_ATTRS = new Set(["data-description", "data-title", "alt", "title"]);
 
@@ -40,6 +49,8 @@ for (const page of pages) {
   src = src.replace(/<script\b[\s\S]*?<\/script>/gi, (m) => keep(m));
   src = src.replace(/<style\b[\s\S]*?<\/style>/gi, (m) => keep(m));
   src = src.replace(/<!--[\s\S]*?-->/g, (m) => keep(m));
+  src = src.replace(/\{\/\*[\s\S]*?\*\/\}/g, (m) => keep(m));
+  src = src.replace(/`[^`]*`/g, (m) => keep(m));
 
   const out = src.split("\n").map((line) => {
     const mode = /<title>|figcaption/.test(line) ? "middot" : "comma";

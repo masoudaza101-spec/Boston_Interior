@@ -1,7 +1,6 @@
 import $ from "jquery";
-import "../css/tailwind.css";
 
-const FORMSPREE_ENDPOINT: string = import.meta.env.VITE_FORMSPREE_ENDPOINT || "";
+const FORMSPREE_ENDPOINT: string = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
 const PHONE_RE = /^\+?[\d\s()-]{7,20}$/;

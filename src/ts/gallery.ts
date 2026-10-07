@@ -1,7 +1,5 @@
 import GLightbox from "glightbox";
-import "glightbox/dist/css/glightbox.css";
 import $ from "jquery";
-import "../css/tailwind.css";
 
 function initFilters(): void {
   const $buttons = $("#portfolio-filters .filter-btn");
