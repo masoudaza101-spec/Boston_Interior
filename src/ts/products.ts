@@ -28,7 +28,7 @@ export const PRODUCT_CATALOG: Product[] = [
     meta: "Steam-bent beech & ash · Bouclé fabric",
     dims: "85 × 88 × 78 cm",
     image: "/images/furn-chair.webp",
-    alt: "Zawadi armchair in beech and ash hardwood"
+    alt: "Zawadi armchair with a sculpted hardwood frame"
   },
   {
     id: "amani-coffee-table",
@@ -48,7 +48,7 @@ export const PRODUCT_CATALOG: Product[] = [
     meta: "Turned maple base · Brushed brass · Linen shade",
     dims: "Ø 30 × H 52 cm",
     image: "/images/furn-lamp.webp",
-    alt: "Malaika table lamp with a turned maple base"
+    alt: "Malaika table lamp styled in a warm modern interior"
   },
   {
     id: "ujamaa-bookshelf",
@@ -58,7 +58,7 @@ export const PRODUCT_CATALOG: Product[] = [
     meta: "Solid oak · Open back",
     dims: "180 × 40 × 200 cm",
     image: "/images/furn-shelf.webp",
-    alt: "Ujamaa open-back bookshelf in solid oak"
+    alt: "Ujamaa open bookshelf styled in a modern lounge"
   },
   {
     id: "upendo-ceramic-vase",
@@ -68,7 +68,7 @@ export const PRODUCT_CATALOG: Product[] = [
     meta: "Hand glazed stoneware · Turned cedar plinth",
     dims: "Ø 22 × H 35 cm",
     image: "/images/furn-decor.webp",
-    alt: "Upendo ceramic vase on a turned cedar plinth"
+    alt: "Upendo ceramic vase styled with dried flowers"
   },
   {
     id: "axis-modular-sofa",
@@ -118,7 +118,7 @@ export const PRODUCT_CATALOG: Product[] = [
     meta: "Modular open-frame shelving · Floating look · Expandable bays",
     dims: "200 × 35 × 210 cm",
     image: "/images/grid-shelf.webp",
-    alt: "Grid modular open shelving unit in solid oak"
+    alt: "Grid open shelving styled with ceramic kitchenware"
   },
   {
     id: "form-ceramic-set",

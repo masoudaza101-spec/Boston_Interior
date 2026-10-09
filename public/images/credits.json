@@ -238,39 +238,11 @@
     "page": "https://www.pexels.com/photo/31737838/"
   },
   {
-    "name": "furn-chair",
-    "title": "furn-chair product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/35033907/"
-  },
-  {
     "name": "furn-table",
     "title": "furn-table product photo",
     "creator": "Pexels",
     "license": "Pexels License",
     "page": "https://www.pexels.com/photo/15602699/"
-  },
-  {
-    "name": "furn-lamp",
-    "title": "furn-lamp product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/38986381/"
-  },
-  {
-    "name": "furn-shelf",
-    "title": "furn-shelf product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/31338030/"
-  },
-  {
-    "name": "furn-decor",
-    "title": "furn-decor product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/31493660/"
   },
   {
     "name": "axis-sofa",
@@ -299,13 +271,6 @@
     "creator": "Pexels",
     "license": "Pexels License",
     "page": "https://www.pexels.com/photo/32684360/"
-  },
-  {
-    "name": "grid-shelf",
-    "title": "grid-shelf product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/27198456/"
   },
   {
     "name": "form-decor",
@@ -350,13 +315,6 @@
     "page": "https://www.pexels.com/photo/36854079/"
   },
   {
-    "name": "mat-cherry",
-    "title": "mat-cherry product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/11112745/"
-  },
-  {
     "name": "mat-mahogany",
     "title": "mat-mahogany product photo",
     "creator": "Pexels",
@@ -371,13 +329,6 @@
     "page": "https://www.pexels.com/photo/7195588/"
   },
   {
-    "name": "mat-cedar",
-    "title": "mat-cedar product photo",
-    "creator": "Pexels",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/7195739/"
-  },
-  {
     "name": "mat-beech",
     "title": "mat-beech product photo",
     "creator": "Pexels",
@@ -390,5 +341,54 @@
     "creator": "Pexels",
     "license": "Pexels License",
     "page": "https://www.pexels.com/photo/38083081/"
+  },
+  {
+    "name": "furn-chair",
+    "title": "furn-chair product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/11507952/"
+  },
+  {
+    "name": "furn-lamp",
+    "title": "furn-lamp product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/32168984/"
+  },
+  {
+    "name": "furn-shelf",
+    "title": "furn-shelf product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/36883416/"
+  },
+  {
+    "name": "furn-decor",
+    "title": "furn-decor product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/7000100/"
+  },
+  {
+    "name": "grid-shelf",
+    "title": "grid-shelf product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/7993285/"
+  },
+  {
+    "name": "mat-cherry",
+    "title": "mat-cherry product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/30037656/"
+  },
+  {
+    "name": "mat-cedar",
+    "title": "mat-cedar product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/4440116/"
   }
 ]
