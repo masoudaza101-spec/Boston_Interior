@@ -21,12 +21,12 @@ export default function PortfolioPage() {
     <section className="page-hero">
       <div className="page-hero-bg"><img src="/images/proj-living.webp" alt="" fetchPriority="high" /></div>
       <div className="container-page relative z-10">
-        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/50">
+        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/65">
           <a href="/" className="transition hover:text-white">Home</a> / <span className="text-bronze-300">Portfolio</span>
         </nav>
         <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-bronze-300" data-reveal><span className="h-px w-10 bg-bronze-300/60"></span>Our Work</span>
         <h1 className="title-xl max-w-3xl text-white" data-reveal>Thoughtfully designed spaces that inspire</h1>
-        <p className="mt-5 max-w-2xl text-white/70" data-reveal>Every project below is a real brief solved with care, filter by category and click any project to view the full gallery.</p>
+        <p className="hero-sub mt-5" data-reveal>Every project below is a real brief solved with care, filter by category and click any project to view the full gallery.</p>
       </div>
     </section>
 
@@ -210,7 +210,7 @@ export default function PortfolioPage() {
       <div className="band-bg"><img src="/images/proj-dining-2.webp" alt="" loading="lazy" /></div>
       <div className="container-page relative z-10">
         <h2 className="title-lg mx-auto max-w-3xl text-white" data-reveal>Want a space like these?</h2>
-        <p className="mx-auto mt-5 max-w-xl text-white/70">Tell us about your project and we will come back to you within one business day.</p>
+        <p className="mx-auto mt-5 max-w-xl text-white/85">Tell us about your project and we will come back to you within one business day.</p>
         <div className="mt-9 flex flex-wrap justify-center gap-4" data-reveal>
           <a className="btn-primary" href="/contact">Book a Consultation</a>
           <a className="btn-ghost-light" href="https://wa.me/17708994600" target="_blank" rel="noopener">Chat on WhatsApp</a>

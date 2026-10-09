@@ -21,12 +21,12 @@ export default function AboutPage() {
     <section className="page-hero">
       <div className="page-hero-bg"><img src="/images/testi-bg.webp" alt="" fetchPriority="high" /></div>
       <div className="container-page relative z-10">
-        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/50">
+        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/65">
           <a href="/" className="transition hover:text-white">Home</a> / <span className="text-bronze-300">About</span>
         </nav>
         <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-bronze-300" data-reveal><span className="h-px w-10 bg-bronze-300/60"></span>About Us</span>
         <h1 className="title-xl max-w-3xl text-white" data-reveal>A studio built on care, craft and honest design</h1>
-        <p className="mt-5 max-w-2xl text-white/70" data-reveal>We believe great interiors come from listening first, to you, to the space, and to the way you want to live in it.</p>
+        <p className="hero-sub mt-5" data-reveal>We believe great interiors come from listening first, to you, to the space, and to the way you want to live in it.</p>
       </div>
     </section>
 
@@ -49,7 +49,7 @@ export default function AboutPage() {
           </p>
           <div className="mt-7 border-l-2 border-bronze pl-5">
             <p className="text-lg font-semibold text-espresso">Sabrah</p>
-            <p className="text-sm text-espresso/60">Founder &amp; Creative Director</p>
+            <p className="text-sm text-espresso/70">Founder &amp; Creative Director</p>
           </div>
         </div>
         <div className="card-media aspect-[4/3]">
@@ -91,22 +91,22 @@ export default function AboutPage() {
           <div className="rounded-xl border border-espresso/10 bg-cream-light p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">01</span>
             <h3 className="mt-4 text-xl">Listen</h3>
-            <p className="mt-2 text-sm text-espresso/65">We learn how you live, work and what you love before drawing a single line.</p>
+            <p className="mt-2 text-sm text-espresso/75">We learn how you live, work and what you love before drawing a single line.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-cream-light p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">02</span>
             <h3 className="mt-4 text-xl">Design</h3>
-            <p className="mt-2 text-sm text-espresso/65">Layouts, mood boards and 3D views make every decision easy to see and approve.</p>
+            <p className="mt-2 text-sm text-espresso/75">Layouts, mood boards and 3D views make every decision easy to see and approve.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-cream-light p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">03</span>
             <h3 className="mt-4 text-xl">Craft</h3>
-            <p className="mt-2 text-sm text-espresso/65">Trusted makers and careful site supervision turn plans into lasting reality.</p>
+            <p className="mt-2 text-sm text-espresso/75">Trusted makers and careful site supervision turn plans into lasting reality.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-cream-light p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">04</span>
             <h3 className="mt-4 text-xl">Style</h3>
-            <p className="mt-2 text-sm text-espresso/65">We finish with the details, textiles, art and lighting that make it yours.</p>
+            <p className="mt-2 text-sm text-espresso/75">We finish with the details, textiles, art and lighting that make it yours.</p>
           </div>
         </div>
       </div>
@@ -118,19 +118,19 @@ export default function AboutPage() {
       <div className="container-page relative z-10 grid grid-cols-2 gap-10 text-center lg:grid-cols-4" data-reveal-stagger>
         <div>
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="5000" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/60">Design Hours Completed</p>
+          <p className="mt-1 text-sm text-white/75">Design Hours Completed</p>
         </div>
         <div>
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="150" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/60">Projects Delivered</p>
+          <p className="mt-1 text-sm text-white/75">Projects Delivered</p>
         </div>
         <div>
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="120" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/60">Satisfied Clients</p>
+          <p className="mt-1 text-sm text-white/75">Satisfied Clients</p>
         </div>
         <div>
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="10" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/60">Years of Experience</p>
+          <p className="mt-1 text-sm text-white/75">Years of Experience</p>
         </div>
       </div>
     </section>
@@ -148,7 +148,7 @@ export default function AboutPage() {
             <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso/90 to-transparent p-6 pt-16">
               <h3 className="text-xl text-white">Design Studio</h3>
-              <p className="mt-1 text-sm text-white/70">Concepts, layouts, 3D visuals and material palettes.</p>
+              <p className="mt-1 text-sm text-white/85">Concepts, layouts, 3D visuals and material palettes.</p>
             </div>
           </div>
           <div className="card-media aspect-[4/3]">
@@ -156,7 +156,7 @@ export default function AboutPage() {
             <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso/90 to-transparent p-6 pt-16">
               <h3 className="text-xl text-white">Project Delivery</h3>
-              <p className="mt-1 text-sm text-white/70">Budgets, contractors, timelines and quality control.</p>
+              <p className="mt-1 text-sm text-white/85">Budgets, contractors, timelines and quality control.</p>
             </div>
           </div>
           <div className="card-media aspect-[4/3]">
@@ -164,7 +164,7 @@ export default function AboutPage() {
             <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-espresso/90 to-transparent p-6 pt-16">
               <h3 className="text-xl text-white">Furniture Workshop</h3>
-              <p className="mt-1 text-sm text-white/70">Custom pieces built to measure with local craftspeople.</p>
+              <p className="mt-1 text-sm text-white/85">Custom pieces built to measure with local craftspeople.</p>
             </div>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function AboutPage() {
       <div className="band-bg"><img src="/images/proj-bedroom.webp" alt="" loading="lazy" /></div>
       <div className="container-page relative z-10">
         <h2 className="title-lg mx-auto max-w-3xl text-white" data-reveal>Let's design something together</h2>
-        <p className="mx-auto mt-5 max-w-xl text-white/70">Share your space, your ideas and your budget, we will take it from there.</p>
+        <p className="mx-auto mt-5 max-w-xl text-white/85">Share your space, your ideas and your budget, we will take it from there.</p>
         <div className="mt-9 flex flex-wrap justify-center gap-4" data-reveal>
           <a className="btn-primary" href="/contact">Book a Consultation</a>
           <a className="btn-ghost-light" href="/portfolio">See Our Work</a>

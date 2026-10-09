@@ -21,12 +21,12 @@ export default function ContactPage() {
     <section className="page-hero">
       <div className="page-hero-bg"><img src="/images/proj-living-2.webp" alt="" fetchPriority="high" /></div>
       <div className="container-page relative z-10">
-        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/50">
+        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/65">
           <a href="/" className="transition hover:text-white">Home</a> / <span className="text-bronze-300">Contact</span>
         </nav>
         <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-bronze-300" data-reveal><span className="h-px w-10 bg-bronze-300/60"></span>Get in Touch</span>
         <h1 className="title-xl max-w-3xl text-white" data-reveal>Book a consultation</h1>
-        <p className="mt-5 max-w-2xl text-white/70" data-reveal>Tell us about your space and your ideas, we reply to every enquiry within one business day.</p>
+        <p className="hero-sub mt-5" data-reveal>Tell us about your space and your ideas, we reply to every enquiry within one business day.</p>
       </div>
     </section>
 
@@ -74,7 +74,7 @@ export default function ContactPage() {
             </div>
 
             <div className="field sm:col-span-2">
-              <label className="field-label" htmlFor="budget">Budget range <span className="font-normal text-espresso/45">(optional)</span></label>
+              <label className="field-label" htmlFor="budget">Budget range <span className="font-normal text-espresso/55">(optional)</span></label>
               <select className="field-input" id="budget" name="budget">
                 <option value="">Select a range</option>
                 <option value="under-1k">Under USD 1,000</option>
@@ -92,7 +92,7 @@ export default function ContactPage() {
             </div>
 
             <div className="field sm:col-span-2">
-              <label className="field-label" htmlFor="photo">Photo / inspiration <span className="font-normal text-espresso/45">(optional, max 5MB)</span></label>
+              <label className="field-label" htmlFor="photo">Photo / inspiration <span className="font-normal text-espresso/55">(optional, max 5MB)</span></label>
               <input className="field-input" type="file" id="photo" name="photo" accept="image/jpeg,image/png,image/webp,application/pdf" />
               <p className="field-error" id="photo-error">Max 5MB: JPG, PNG, WEBP or PDF.</p>
             </div>
@@ -116,7 +116,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="font-semibold text-white">WhatsApp</p>
-                  <a className="text-white/70 transition hover:text-white" href="https://wa.me/17708994600" target="_blank" rel="noopener">+1 770 899 4600</a>
+                  <a className="text-white/85 transition hover:text-white" href="https://wa.me/17708994600" target="_blank" rel="noopener">+1 770 899 4600</a>
                 </div>
               </div>
 
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="font-semibold text-white">Call</p>
-                  <a className="text-white/70 transition hover:text-white" href="tel:+255655743141">+255 655 743 141</a>
+                  <a className="text-white/85 transition hover:text-white" href="tel:+255655743141">+255 655 743 141</a>
                 </div>
               </div>
 
@@ -136,7 +136,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="font-semibold text-white">Working Hours</p>
-                  <p className="text-white/70">Monday to Saturday, 08:00 to 18:00</p>
+                  <p className="text-white/85">Monday to Saturday, 08:00 to 18:00</p>
                 </div>
               </div>
 
@@ -146,7 +146,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="font-semibold text-white">Email</p>
-                  <a className="text-white/70 transition hover:text-white" href="mailto:info@bostoninterior.co.tz">info@bostoninterior.co.tz</a>
+                  <a className="text-white/85 transition hover:text-white" href="mailto:info@bostoninterior.co.tz">info@bostoninterior.co.tz</a>
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="font-semibold text-white">Studio</p>
-                  <p className="text-white/70">Dar es Salaam, Tanzania, by appointment</p>
+                  <p className="text-white/85">Dar es Salaam, Tanzania, by appointment</p>
                 </div>
               </div>
             </div>
@@ -179,7 +179,7 @@ export default function ContactPage() {
 
           <div className="mt-6 rounded-xl border border-espresso/10 bg-cream-light p-6">
             <h3 className="text-lg">What happens next?</h3>
-            <ol className="mt-3 space-y-2 text-sm text-espresso/65">
+            <ol className="mt-3 space-y-2 text-sm text-espresso/75">
               <li><strong className="text-espresso">1.</strong> We review your enquiry and reply within one business day.</li>
               <li><strong className="text-espresso">2.</strong> A free 20 minute call to understand your space and goals.</li>
               <li><strong className="text-espresso">3.</strong> A tailored proposal with scope, timeline and budget.</li>

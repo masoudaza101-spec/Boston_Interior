@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-<footer className="bg-espresso-900 text-white/70">
+<footer className="bg-espresso-900 text-white/85">
     <div className="container-page py-16">
       <div className="grid gap-12 lg:grid-cols-12" data-reveal-stagger>
         <div className="lg:col-span-4">
@@ -33,7 +33,7 @@ export default function Footer() {
             <li><a className="transition hover:text-white" href="/about">About Us</a></li>
             <li><a className="transition hover:text-white" href="/services">Services</a></li>
             <li><a className="transition hover:text-white" href="/portfolio">Portfolio</a></li>
-            <li><a className="transition hover:text-white" href="/furniture">Furniture</a></li>
+            <li><a className="transition hover:text-white" href="/furniture">Products</a></li>
             <li><a className="transition hover:text-white" href="/contact">Contact</a></li>
           </ul>
         </div>
@@ -80,7 +80,7 @@ export default function Footer() {
     <div className="border-t border-white/10">
       <div className="container-page flex flex-col items-center justify-between gap-3 py-6 text-xs sm:flex-row">
         <p>© <span className="current-year">2026</span> Boston Interior by Sabrah. All rights reserved.</p>
-        <p>Interior Design · Decoration · Furniture</p>
+        <p>Interior Design · Decoration · Products</p>
       </div>
     </div>
   </footer>

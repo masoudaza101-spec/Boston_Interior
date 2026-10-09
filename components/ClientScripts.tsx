@@ -10,6 +10,7 @@ export default function ClientScripts() {
     void import("../src/ts/main");
     if (pathname === "/portfolio") void import("../src/ts/gallery");
     if (pathname === "/contact") void import("../src/ts/form");
+    if (pathname === "/furniture") void import("../src/ts/inquiry");
   }, [pathname]);
 
   return null;

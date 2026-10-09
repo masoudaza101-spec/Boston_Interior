@@ -21,12 +21,12 @@ export default function ServicesPage() {
     <section className="page-hero">
       <div className="page-hero-bg"><img src="/images/svc-planning.webp" alt="" fetchPriority="high" /></div>
       <div className="container-page relative z-10">
-        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/50">
+        <nav aria-label="Breadcrumb" className="mb-5 text-xs uppercase tracking-[0.2em] text-white/65">
           <a href="/" className="transition hover:text-white">Home</a> / <span className="text-bronze-300">Services</span>
         </nav>
         <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-bronze-300" data-reveal><span className="h-px w-10 bg-bronze-300/60"></span>Our Services</span>
         <h1 className="title-xl max-w-3xl text-white" data-reveal>Design solutions made for living</h1>
-        <p className="mt-5 max-w-2xl text-white/70" data-reveal>Five core services, one joined up process, from the first measurement to the final styled photograph.</p>
+        <p className="hero-sub mt-5" data-reveal>Five core services, one joined up process, from the first measurement to the final styled photograph.</p>
       </div>
     </section>
 
@@ -46,7 +46,7 @@ export default function ServicesPage() {
               Apartments, villas and family homes designed around the way you actually live. We handle
               layout, lighting, materials, furniture and styling, whole home or a single room.
             </p>
-            <ul className="mt-5 space-y-2.5 text-sm text-espresso/70">
+            <ul className="mt-5 space-y-2.5 text-sm text-espresso/80">
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Full home and single room design</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Furniture, lighting and décor selection</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Renovation guidance and contractor coordination</li>
@@ -70,7 +70,7 @@ export default function ServicesPage() {
               Offices, retail stores, restaurants and clinics that support your brand and your people,
               planned for flow, comfort and a professional first impression.
             </p>
-            <ul className="mt-5 space-y-2.5 text-sm text-espresso/70">
+            <ul className="mt-5 space-y-2.5 text-sm text-espresso/80">
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Workspaces, retail and hospitality interiors</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Brand aligned colours, signage and finishes</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Phased works to minimise business downtime</li>
@@ -94,7 +94,7 @@ export default function ServicesPage() {
               The smartest redesign often starts on paper. We rethink layouts, circulation and storage so
               every square metre earns its place.
             </p>
-            <ul className="mt-5 space-y-2.5 text-sm text-espresso/70">
+            <ul className="mt-5 space-y-2.5 text-sm text-espresso/80">
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Layout optimisation and zoning</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>2D plans and 3D visualisations</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Storage and furniture fit studies</li>
@@ -118,7 +118,7 @@ export default function ServicesPage() {
               Colour, textiles, art, rugs and lighting, the layer that turns a finished room into a
               space with warmth and personality.
             </p>
-            <ul className="mt-5 space-y-2.5 text-sm text-espresso/70">
+            <ul className="mt-5 space-y-2.5 text-sm text-espresso/80">
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Colour and material palettes</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Textiles, art and accessory sourcing</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Final styling and hand over photography</li>
@@ -142,14 +142,14 @@ export default function ServicesPage() {
               Off the shelf rarely fits perfectly. We design and build made to measure furniture with
               trusted workshops, your dimensions, your materials, your style.
             </p>
-            <ul className="mt-5 space-y-2.5 text-sm text-espresso/70">
+            <ul className="mt-5 space-y-2.5 text-sm text-espresso/80">
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Bespoke sofas, tables, beds and storage</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Material, finish and upholstery selection</li>
               <li className="flex gap-3"><span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-bronze"></span>Sourcing and curation for your project</li>
             </ul>
             <div className="mt-7 flex flex-wrap gap-4" data-reveal>
               <a className="btn-primary" href="/contact?service=Furniture">Request Quote</a>
-              <a className="btn-outline" href="/furniture">Browse Furniture</a>
+              <a className="btn-outline" href="/furniture">Browse Products</a>
             </div>
           </div>
         </div>
@@ -168,22 +168,22 @@ export default function ServicesPage() {
           <div className="rounded-xl border border-espresso/10 bg-white p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">01</span>
             <h3 className="mt-4 text-xl">Consultation</h3>
-            <p className="mt-2 text-sm text-espresso/65">We discuss your needs, style, budget and goals to understand your space clearly.</p>
+            <p className="mt-2 text-sm text-espresso/75">We discuss your needs, style, budget and goals to understand your space clearly.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-white p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">02</span>
             <h3 className="mt-4 text-xl">Concept Design</h3>
-            <p className="mt-2 text-sm text-espresso/65">Layouts, mood boards and material palettes tailored to your lifestyle and taste.</p>
+            <p className="mt-2 text-sm text-espresso/75">Layouts, mood boards and material palettes tailored to your lifestyle and taste.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-white p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">03</span>
             <h3 className="mt-4 text-xl">Execution</h3>
-            <p className="mt-2 text-sm text-espresso/65">Quality materials, skilled craftspeople and careful project management on site.</p>
+            <p className="mt-2 text-sm text-espresso/75">Quality materials, skilled craftspeople and careful project management on site.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-white p-7">
             <span className="text-sm font-bold tracking-widest text-bronze">04</span>
             <h3 className="mt-4 text-xl">Final Reveal</h3>
-            <p className="mt-2 text-sm text-espresso/65">Your completed space, styled and finished beautifully, ready to enjoy.</p>
+            <p className="mt-2 text-sm text-espresso/75">Your completed space, styled and finished beautifully, ready to enjoy.</p>
           </div>
         </div>
       </div>
@@ -194,7 +194,7 @@ export default function ServicesPage() {
       <div className="band-bg"><img src="/images/proj-office.webp" alt="" loading="lazy" /></div>
       <div className="container-page relative z-10">
         <h2 className="title-lg mx-auto max-w-3xl text-white" data-reveal>Not sure which service you need?</h2>
-        <p className="mx-auto mt-5 max-w-xl text-white/70">Describe your space in a message and we will recommend the right package, timeline and budget.</p>
+        <p className="mx-auto mt-5 max-w-xl text-white/85">Describe your space in a message and we will recommend the right package, timeline and budget.</p>
         <div className="mt-9 flex flex-wrap justify-center gap-4" data-reveal>
           <a className="btn-primary" href="/contact">Request a Quote</a>
           <a className="btn-ghost-light" href="https://wa.me/17708994600" target="_blank" rel="noopener">Chat on WhatsApp</a>

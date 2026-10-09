@@ -17,7 +17,7 @@ export default function Header() {
           <a className="nav-link" href="/about">About</a>
           <a className="nav-link" href="/services">Services</a>
           <a className="nav-link" href="/portfolio">Portfolio</a>
-          <a className="nav-link" href="/furniture">Furniture</a>
+          <a className="nav-link" href="/furniture">Products</a>
           <a className="nav-link" href="/contact">Contact</a>
         </nav>
         <div className="flex items-center gap-4">
@@ -36,7 +36,7 @@ export default function Header() {
       <a href="/about">About</a>
       <a href="/services">Services</a>
       <a href="/portfolio">Portfolio</a>
-      <a href="/furniture">Furniture</a>
+      <a href="/furniture">Products</a>
       <a href="/contact">Contact</a>
     </nav>
     <a className="btn-primary mt-4" href="/contact">Book a Consultation</a>

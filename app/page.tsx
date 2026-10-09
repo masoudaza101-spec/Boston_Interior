@@ -17,7 +17,7 @@ export default function HomePage() {
       <div className="hero-overlay absolute inset-0"></div>
 
       <div className="container-page relative z-10 pb-40 pt-44">
-        <span className="mb-7 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-white/70" data-reveal>
+        <span className="mb-7 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-white/85" data-reveal>
           <span className="h-px w-10 bg-white/50"></span>Interior Design &amp; Decoration
         </span>
         <h1 className="mb-0" data-reveal-stagger>
@@ -25,19 +25,19 @@ export default function HomePage() {
           <span className="hero-split block text-right">Elevated Living</span>
         </h1>
         <div className="mt-10 grid gap-8 md:grid-cols-12" data-reveal-stagger>
-          <p className="text-base leading-relaxed text-white/80 md:col-span-5 md:col-start-1 sm:text-lg">
+          <p className="hero-lead md:col-span-6 md:col-start-1 md:pr-8">
             Boston Interior designs warm, functional spaces, from first concept to the final styled
             detail, creating homes and workplaces that feel inviting, personal and timeless.
           </p>
-          <div className="flex flex-wrap items-start gap-4 md:col-span-6 md:col-start-7 md:justify-end" data-reveal>
-            <a className="btn-primary" href="/contact">Book a Consultation</a>
-            <a className="btn-ghost-light" href="/portfolio">View Our Portfolio</a>
+          <div className="flex flex-row items-stretch gap-3 md:col-span-6 md:col-start-7 md:justify-end md:gap-4" data-reveal>
+            <a className="btn-primary flex-1 justify-center whitespace-nowrap px-4 text-xs sm:px-7 sm:text-sm md:flex-none" href="/contact">Book a Consultation</a>
+            <a className="btn-ghost-light flex-1 justify-center whitespace-nowrap px-4 text-xs sm:px-7 sm:text-sm md:flex-none" href="/portfolio">View Our Portfolio</a>
           </div>
         </div>
       </div>
 
       <div className="absolute inset-x-0 bottom-0 z-10 hidden pb-24 md:block" data-reveal>
-        <div className="container-page flex items-center justify-between gap-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/70">
+        <div className="container-page flex items-center justify-between gap-6 text-xs font-semibold uppercase tracking-[0.2em] text-white/85">
           <span className="inline-flex items-center gap-3"><span className="h-1.5 w-1.5 rounded-full bg-bronze-300"></span>Functional Space Planning</span>
           <span className="inline-flex items-center gap-3"><span className="h-1.5 w-1.5 rounded-full bg-bronze-300"></span>Stylish Material Selection</span>
           <span className="inline-flex items-center gap-3"><span className="h-1.5 w-1.5 rounded-full bg-bronze-300"></span>Tailored Design Concepts</span>
@@ -50,14 +50,14 @@ export default function HomePage() {
      {/* ============ MARQUEE ============ */}
     <div className="marquee-band overflow-hidden bg-espresso py-4" aria-hidden="true">
       <div className="marquee-track flex w-max items-center whitespace-nowrap text-sm font-medium uppercase tracking-[0.25em]">
-        <span className="marquee-item text-white/80">Interior Design</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Space Planning</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Decoration &amp; Styling</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Custom Furniture</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Interior Design</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Space Planning</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Decoration &amp; Styling</span><span className="marquee-sep">&bull;</span>
-        <span className="marquee-item text-white/80">Custom Furniture</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Interior Design</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Space Planning</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Decoration &amp; Styling</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Custom Furniture</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Interior Design</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Space Planning</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Decoration &amp; Styling</span><span className="marquee-sep">&bull;</span>
+        <span className="marquee-item text-white/90">Custom Furniture</span><span className="marquee-sep">&bull;</span>
       </div>
     </div>
 
@@ -81,7 +81,7 @@ export default function HomePage() {
           </p>
           <div className="mt-7 border-l-2 border-bronze pl-5">
             <p className="text-lg font-semibold text-espresso">Sabrah</p>
-            <p className="text-sm text-espresso/60">Founder &amp; Creative Director</p>
+            <p className="text-sm text-espresso/70">Founder &amp; Creative Director</p>
           </div>
           <a className="btn-outline mt-8" href="/about">Learn About Us</a>
         </div>
@@ -93,19 +93,19 @@ export default function HomePage() {
       <div className="container-page grid grid-cols-2 gap-x-8 gap-y-8 sm:grid-cols-4" data-reveal-stagger>
         <div>
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="5000" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/55">Design Hours</p>
+          <p className="mt-1 text-sm text-white/70">Design Hours</p>
         </div>
         <div className="sm:border-l sm:border-white/10 sm:pl-8">
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="150" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/55">Projects Completed</p>
+          <p className="mt-1 text-sm text-white/70">Projects Completed</p>
         </div>
         <div className="border-t border-white/10 pt-6 sm:border-t-0 sm:border-l sm:border-white/10 sm:pl-8 sm:pt-0">
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="120" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/55">Happy Clients</p>
+          <p className="mt-1 text-sm text-white/70">Happy Clients</p>
         </div>
         <div className="border-t border-white/10 pt-6 sm:border-t-0 sm:border-l sm:border-white/10 sm:pl-8 sm:pt-0">
           <p className="text-4xl font-semibold text-bronze-300 lg:text-5xl"><span className="counter" data-target="10" data-suffix="+">0</span></p>
-          <p className="mt-1 text-sm text-white/55">Years of Experience</p>
+          <p className="mt-1 text-sm text-white/70">Years of Experience</p>
         </div>
       </div>
     </section>
@@ -134,7 +134,7 @@ export default function HomePage() {
               <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             </div>
             <h3 className="mt-5 text-xl">Residential Interior Design</h3>
-            <p className="mt-2 text-sm text-espresso/65">Apartments, villas and family homes designed for comfort, flow and everyday beauty.</p>
+            <p className="mt-2 text-sm text-espresso/75">Apartments, villas and family homes designed for comfort, flow and everyday beauty.</p>
           </a>
 
           <a href="/services" className="group block">
@@ -143,7 +143,7 @@ export default function HomePage() {
               <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             </div>
             <h3 className="mt-5 text-xl">Commercial Interior Design</h3>
-            <p className="mt-2 text-sm text-espresso/65">Offices, retail and hospitality spaces that work hard and look remarkable.</p>
+            <p className="mt-2 text-sm text-espresso/75">Offices, retail and hospitality spaces that work hard and look remarkable.</p>
           </a>
 
           <a href="/services" className="group block">
@@ -152,7 +152,7 @@ export default function HomePage() {
               <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             </div>
             <h3 className="mt-5 text-xl">Space Planning</h3>
-            <p className="mt-2 text-sm text-espresso/65">Smart layouts that make every square metre useful, comfortable and easy to move through.</p>
+            <p className="mt-2 text-sm text-espresso/75">Smart layouts that make every square metre useful, comfortable and easy to move through.</p>
           </a>
 
           <a href="/services" className="group block">
@@ -161,7 +161,7 @@ export default function HomePage() {
               <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             </div>
             <h3 className="mt-5 text-xl">Decoration &amp; Styling</h3>
-            <p className="mt-2 text-sm text-espresso/65">Colour, textiles, lighting and décor brought together into one cohesive, warm story.</p>
+            <p className="mt-2 text-sm text-espresso/75">Colour, textiles, lighting and décor brought together into one cohesive, warm story.</p>
           </a>
 
           <a href="/services" className="group block">
@@ -170,12 +170,12 @@ export default function HomePage() {
               <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
             </div>
             <h3 className="mt-5 text-xl">Furniture Customization</h3>
-            <p className="mt-2 text-sm text-espresso/65">Bespoke pieces built to your measurements, materials and taste by our workshop partners.</p>
+            <p className="mt-2 text-sm text-espresso/75">Bespoke pieces built to your measurements, materials and taste by our workshop partners.</p>
           </a>
 
           <div className="flex flex-col justify-center rounded-xl bg-espresso p-8 text-white">
             <h3 className="text-2xl text-white">Not sure where to start?</h3>
-            <p className="mt-3 text-sm text-white/70">Tell us about your space and we will recommend the right services, timeline and budget.</p>
+            <p className="mt-3 text-sm text-white/85">Tell us about your space and we will recommend the right services, timeline and budget.</p>
             <a className="btn-light mt-6 self-start" href="/contact">Request a Quote</a>
           </div>
         </div>
@@ -312,22 +312,22 @@ export default function HomePage() {
           <div className="rounded-xl border border-espresso/10 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-bronze/40 hover:shadow-[0_22px_45px_-28px_rgba(52,31,22,0.5)]">
             <span className="text-sm font-bold tracking-widest text-bronze">01</span>
             <h3 className="mt-4 text-xl">Consultation</h3>
-            <p className="mt-2 text-sm text-espresso/65">We discuss your needs, style, budget and goals to understand your space clearly.</p>
+            <p className="mt-2 text-sm text-espresso/75">We discuss your needs, style, budget and goals to understand your space clearly.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-bronze/40 hover:shadow-[0_22px_45px_-28px_rgba(52,31,22,0.5)]">
             <span className="text-sm font-bold tracking-widest text-bronze">02</span>
             <h3 className="mt-4 text-xl">Concept Design</h3>
-            <p className="mt-2 text-sm text-espresso/65">Layouts, mood boards and material palettes tailored to your lifestyle and taste.</p>
+            <p className="mt-2 text-sm text-espresso/75">Layouts, mood boards and material palettes tailored to your lifestyle and taste.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-bronze/40 hover:shadow-[0_22px_45px_-28px_rgba(52,31,22,0.5)]">
             <span className="text-sm font-bold tracking-widest text-bronze">03</span>
             <h3 className="mt-4 text-xl">Execution</h3>
-            <p className="mt-2 text-sm text-espresso/65">Quality materials, skilled craftspeople and careful project management on site.</p>
+            <p className="mt-2 text-sm text-espresso/75">Quality materials, skilled craftspeople and careful project management on site.</p>
           </div>
           <div className="rounded-xl border border-espresso/10 bg-white p-7 transition duration-300 hover:-translate-y-1.5 hover:border-bronze/40 hover:shadow-[0_22px_45px_-28px_rgba(52,31,22,0.5)]">
             <span className="text-sm font-bold tracking-widest text-bronze">04</span>
             <h3 className="mt-4 text-xl">Final Reveal</h3>
-            <p className="mt-2 text-sm text-espresso/65">Your completed space, styled and finished beautifully, ready to enjoy.</p>
+            <p className="mt-2 text-sm text-espresso/75">Your completed space, styled and finished beautifully, ready to enjoy.</p>
           </div>
         </div>
       </div>
@@ -340,13 +340,13 @@ export default function HomePage() {
           <img src="/images/furn-chair.webp" alt="Custom armchair from the Boston Interior furniture collection" loading="lazy" width="1100" height="850" />
         </div>
         <div>
-          <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/70" data-reveal><span className="h-px w-10 bg-white/50"></span>Furniture &amp; Décor</span>
+          <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-white/85" data-reveal><span className="h-px w-10 bg-white/50"></span>Products &amp; Décor</span>
           <h2 className="title-lg text-white" data-reveal>Pieces made to live with</h2>
-          <p className="mt-5 text-base leading-relaxed text-white/80 sm:text-lg">
+          <p className="mt-5 text-base leading-relaxed text-white/90 sm:text-lg">
             Sofas, chairs, tables, lighting and décor, selected and custom built to fit your space
-            exactly. Browse the collection and inquire about any piece; we deliver across Tanzania.
+            exactly. Browse the collection and enquire about any piece; we deliver across Tanzania.
           </p>
-          <a className="btn-light mt-8" href="/furniture">Explore Furniture</a>
+          <a className="btn-light mt-8" href="/furniture">Explore Products</a>
         </div>
       </div>
     </section>
@@ -405,12 +405,12 @@ export default function HomePage() {
       <div className="band-bg"><img src="/images/proj-living.webp" alt="" loading="lazy" /></div>
       <div className="container-page relative z-10">
         <h2 className="title-lg mx-auto max-w-3xl text-white text-balance" data-reveal>Ready to transform your space?</h2>
-        <p className="mx-auto mt-5 max-w-xl text-white/70">Tell us about your project and we will come back to you within one business day with next steps.</p>
+        <p className="mx-auto mt-5 max-w-xl text-white/85">Tell us about your project and we will come back to you within one business day with next steps.</p>
         <div className="mt-9 flex flex-wrap justify-center gap-4" data-reveal>
           <a className="btn-primary" href="/contact">Book a Consultation</a>
           <a className="btn-ghost-light" href="https://wa.me/17708994600" target="_blank" rel="noopener">Chat on WhatsApp</a>
         </div>
-        <div className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/60" data-reveal>
+        <div className="mx-auto mt-10 flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-white/75" data-reveal>
           <a className="transition hover:text-white" href="https://wa.me/17708994600" target="_blank" rel="noopener">WhatsApp +1 770 899 4600</a>
           <span className="hidden h-4 w-px bg-white/20 sm:block"></span>
           <a className="transition hover:text-white" href="tel:+255655743141">+255 655 743 141</a>
