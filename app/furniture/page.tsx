@@ -1,17 +1,32 @@
 import type { Metadata } from "next";
+import { PRODUCT_CATALOG } from "@/src/ts/products";
 
 export const metadata: Metadata = {
   "title": "Products & Décor",
-  "description": "Browse Boston Interior's curated collection of furniture and décor, sofas, chairs, tables, lighting and décor pieces. Made to order, add pieces to your inquiry list for pricing.",
+  "description": "Browse Boston Interior's curated collection of furniture and décor, sofas, chairs, tables, lighting and décor pieces. Made to order in oak, walnut, teak, maple, ash, cherry, mahogany, birch, cedar, beech and engineered wood.",
   "openGraph": {
     "title": "Products & Décor · Boston Interior",
-    "description": "Sofas, chairs, tables, lighting and décor, built to fit your space exactly.",
+    "description": "Sofas, chairs, tables, lighting and décor, built to fit your space exactly in mixed modern hardwoods.",
     "type": "website",
     "images": [
       "/images/furn-sofa.webp"
     ]
   }
 };
+
+const WOODS: { name: string; slug: string; note: string }[] = [
+  { name: "Oak", slug: "oak", note: "Dense, pale and hard-wearing" },
+  { name: "Walnut", slug: "walnut", note: "Rich chocolate grain" },
+  { name: "Teak", slug: "teak", note: "Golden and weather resistant" },
+  { name: "Maple", slug: "maple", note: "Fine, light and smooth" },
+  { name: "Ash", slug: "ash", note: "Springy with bold figure" },
+  { name: "Cherry", slug: "cherry", note: "Warm red-brown patina" },
+  { name: "Mahogany", slug: "mahogany", note: "Deep and luxurious" },
+  { name: "Birch", slug: "birch", note: "Pale and uniform" },
+  { name: "Cedar", slug: "cedar", note: "Aromatic and stable" },
+  { name: "Beech", slug: "beech", note: "Tough with close grain" },
+  { name: "Engineered", slug: "engineered", note: "Stable, layered and sustainable" }
+];
 
 export default function FurniturePage() {
   return (
@@ -26,7 +41,7 @@ export default function FurniturePage() {
         </nav>
         <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.25em] text-bronze-300" data-reveal><span className="h-px w-10 bg-bronze-300/60"></span>Products &amp; Décor</span>
         <h1 className="title-xl max-w-3xl text-white" data-reveal>Pieces made to live with</h1>
-        <p className="hero-sub mt-5" data-reveal>A curated collection of furniture, lighting and décor. Add any piece to your inquiry list and we will confirm pricing, finishes and lead time.</p>
+        <p className="hero-sub mt-5" data-reveal>A curated collection of furniture, lighting and décor in oak, walnut, teak, maple, ash, cherry, mahogany, birch, cedar and beech. Select the pieces you like, set quantities and send one combined enquiry.</p>
       </div>
     </section>
 
@@ -34,107 +49,88 @@ export default function FurniturePage() {
     <section className="section">
       <div className="container-page">
         <p className="mb-10 rounded-lg border border-bronze/20 bg-bronze-50 px-5 py-3 text-sm text-espresso/75">
-          <strong className="text-espresso">Display only.</strong> All pieces are made to order, no online payment. Add pieces to your inquiry list and send one message to ask about price, materials and delivery.
+          <strong className="text-espresso">Made to order.</strong> All pieces are built in mixed modern hardwoods and finished to your taste, no online payment. Choose the pieces and quantities you like, then send one message with your details.
         </p>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-reveal-stagger>
 
-          <article className="group product-card" data-product-id="sabrah-lounge-sofa" data-product-name="Sabrah Lounge Sofa" data-product-meta="Solid mahogany frame · Premium linen upholstery · 220 × 95 × 80 cm" data-product-image="/images/furn-sofa.webp">
-            <div className="card-media aspect-[4/3]">
-              <img src="/images/furn-sofa.webp" alt="Sabrah lounge sofa" loading="lazy" width="1100" height="850" />
-              <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
-            </div>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-xl">Sabrah Lounge Sofa</h2>
-                <p className="mt-1 text-sm text-espresso/70">Solid mahogany frame · Premium linen upholstery</p>
-                <p className="text-sm text-espresso/70">220 × 95 × 80 cm</p>
+          {PRODUCT_CATALOG.map((p) => (
+            <article
+              key={p.id}
+              className="group product-card"
+              data-product-id={p.id}
+              data-product-name={p.name}
+              data-product-wood={p.wood}
+              data-product-meta={`${p.meta} · ${p.dims}`}
+              data-product-image={p.image}
+            >
+              <div className="card-media aspect-[4/3]">
+                <img src={p.image} alt={p.alt} loading="lazy" width="1100" height="850" />
+                <span className="wood-badge">{p.wood}</span>
+                <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
               </div>
-              <span className="tag">Seating</span>
-            </div>
-            <button className="btn-outline add-to-inquiry mt-4 w-full" type="button" aria-pressed="false">Add to Inquiry</button>
-          </article>
-
-          <article className="group product-card" data-product-id="zawadi-armchair" data-product-name="Zawadi Armchair" data-product-meta="Kiln dried hardwood · Bouclé fabric · 85 × 88 × 78 cm" data-product-image="/images/furn-chair.webp">
-            <div className="card-media aspect-[4/3]">
-              <img src="/images/furn-chair.webp" alt="Zawadi armchair" loading="lazy" width="1100" height="850" />
-              <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
-            </div>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-xl">Zawadi Armchair</h2>
-                <p className="mt-1 text-sm text-espresso/70">Kiln dried hardwood · Bouclé fabric</p>
-                <p className="text-sm text-espresso/70">85 × 88 × 78 cm</p>
+              <div className="mt-5 flex items-start justify-between gap-4">
+                <div>
+                  <h2 className="text-xl">{p.name}</h2>
+                  <p className="mt-1 text-sm text-espresso/70">{p.meta}</p>
+                  <p className="text-sm text-espresso/70">{p.dims}</p>
+                </div>
+                <span className="tag">{p.tag}</span>
               </div>
-              <span className="tag">Seating</span>
-            </div>
-            <button className="btn-outline add-to-inquiry mt-4 w-full" type="button" aria-pressed="false">Add to Inquiry</button>
-          </article>
-
-          <article className="group product-card" data-product-id="amani-coffee-table" data-product-name="Amani Coffee Table" data-product-meta="Solid walnut · Natural oil finish · 110 × 60 × 42 cm" data-product-image="/images/furn-table.webp">
-            <div className="card-media aspect-[4/3]">
-              <img src="/images/furn-table.webp" alt="Amani coffee table" loading="lazy" width="1100" height="850" />
-              <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
-            </div>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-xl">Amani Coffee Table</h2>
-                <p className="mt-1 text-sm text-espresso/70">Solid walnut · Natural oil finish</p>
-                <p className="text-sm text-espresso/70">110 × 60 × 42 cm</p>
+              <div className="mt-4 flex items-stretch gap-3">
+                <div className="qty-stepper" role="group" aria-label={`Quantity for ${p.name}`}>
+                  <button type="button" className="qty-btn" data-qty="-1" aria-label={`Decrease quantity for ${p.name}`}>−</button>
+                  <input className="qty-input" type="number" min="1" max="99" defaultValue="1" inputMode="numeric" aria-label={`Quantity for ${p.name}`} />
+                  <button type="button" className="qty-btn" data-qty="1" aria-label={`Increase quantity for ${p.name}`}>+</button>
+                </div>
+                <button className="btn-outline add-to-inquiry flex-1 px-4" type="button" aria-pressed="false">Add to Inquiry</button>
               </div>
-              <span className="tag">Tables</span>
-            </div>
-            <button className="btn-outline add-to-inquiry mt-4 w-full" type="button" aria-pressed="false">Add to Inquiry</button>
-          </article>
+            </article>
+          ))}
 
-          <article className="group product-card" data-product-id="malaika-table-lamp" data-product-name="Malaika Table Lamp" data-product-meta="Brushed brass · Linen shade · Ø 30 × H 52 cm" data-product-image="/images/furn-lamp.webp">
-            <div className="card-media aspect-[4/3]">
-              <img src="/images/furn-lamp.webp" alt="Malaika table lamp" loading="lazy" width="1100" height="850" />
-              <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
-            </div>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-xl">Malaika Table Lamp</h2>
-                <p className="mt-1 text-sm text-espresso/70">Brushed brass · Linen shade</p>
-                <p className="text-sm text-espresso/70">Ø 30 × H 52 cm</p>
+        </div>
+      </div>
+    </section>
+
+     {/* ============ WOOD MATERIALS ============ */} 
+    <section className="section bg-cream-light">
+      <div className="container-page">
+        <div className="grid items-end gap-8 lg:grid-cols-2" data-reveal-stagger>
+          <div>
+            <span className="eyebrow" data-reveal>Wood &amp; Materials</span>
+            <h2 className="title-lg max-w-xl text-balance" data-reveal>Real designs, crafted from every wood</h2>
+          </div>
+          <div className="lg:pb-2">
+            <p className="lead" data-reveal>
+              A product designed and made from each of our eleven woods, mixing species for contrast,
+              grain and warmth. Every piece can be built in the material, tone and finish that suits your space.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4 lg:gap-5" data-reveal-stagger>
+          {WOODS.map((w, i) => (
+            <figure
+              key={w.slug}
+              className={`group material-card overflow-hidden rounded-xl border border-espresso/10 bg-white ${i === WOODS.length - 1 ? "col-span-2" : ""}`}
+            >
+              <div className={`relative overflow-hidden ${i === WOODS.length - 1 ? "aspect-[40/21] sm:aspect-[16/9]" : "aspect-[4/3]"}`}>
+                <img
+                  src={`/images/mat-${w.slug}.webp`}
+                  alt={`${w.name} product design made by Boston Interior`}
+                  loading="lazy"
+                  width="1000"
+                  height="750"
+                  className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                />
+                <span className="material-glare" aria-hidden="true"></span>
               </div>
-              <span className="tag">Lighting</span>
-            </div>
-            <button className="btn-outline add-to-inquiry mt-4 w-full" type="button" aria-pressed="false">Add to Inquiry</button>
-          </article>
-
-          <article className="group product-card" data-product-id="ujamaa-bookshelf" data-product-name="Ujamaa Bookshelf" data-product-meta="Solid oak · Open back · 180 × 40 × 200 cm" data-product-image="/images/furn-shelf.webp">
-            <div className="card-media aspect-[4/3]">
-              <img src="/images/furn-shelf.webp" alt="Ujamaa bookshelf" loading="lazy" width="1100" height="850" />
-              <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
-            </div>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-xl">Ujamaa Bookshelf</h2>
-                <p className="mt-1 text-sm text-espresso/70">Solid oak · Open back</p>
-                <p className="text-sm text-espresso/70">180 × 40 × 200 cm</p>
-              </div>
-              <span className="tag">Storage</span>
-            </div>
-            <button className="btn-outline add-to-inquiry mt-4 w-full" type="button" aria-pressed="false">Add to Inquiry</button>
-          </article>
-
-          <article className="group product-card" data-product-id="upendo-ceramic-vase" data-product-name="Upendo Ceramic Vase" data-product-meta="Hand glazed stoneware · Ø 22 × H 35 cm" data-product-image="/images/furn-decor.webp">
-            <div className="card-media aspect-[4/3]">
-              <img src="/images/furn-decor.webp" alt="Upendo ceramic vase" loading="lazy" width="1100" height="850" />
-              <span className="arrow-badge" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M7 17 17 7M17 7H8m9 0v9"/></svg></span>
-            </div>
-            <div className="mt-5 flex items-start justify-between gap-4">
-              <div>
-                <h2 className="text-xl">Upendo Ceramic Vase</h2>
-                <p className="mt-1 text-sm text-espresso/70">Hand glazed stoneware</p>
-                <p className="text-sm text-espresso/70">Ø 22 × H 35 cm</p>
-              </div>
-              <span className="tag">Décor</span>
-            </div>
-            <button className="btn-outline add-to-inquiry mt-4 w-full" type="button" aria-pressed="false">Add to Inquiry</button>
-          </article>
-
+              <figcaption className="flex items-baseline justify-between gap-2 px-4 py-3">
+                <span className="text-sm font-semibold text-espresso">{w.name}</span>
+                <span className="text-right text-xs text-espresso/65">{w.note}</span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
       </div>
     </section>
@@ -151,11 +147,11 @@ export default function FurniturePage() {
           </p>
           <div className="mt-8 flex flex-wrap gap-4" data-reveal>
             <a className="btn-light" href="/contact?service=Furniture">Request a Quote</a>
-            <a className="btn-ghost-light" href="https://wa.me/17708994600" target="_blank" rel="noopener">WhatsApp Us</a>
+            <a className="btn-ghost-light" href="https://wa.me/17708994600" target="_blank" rel="noopener">WhatsApp Us (optional)</a>
           </div>
         </div>
         <div className="card-media aspect-[4/3]">
-          <img src="/images/furn-shelf.webp" alt="Custom shelving built by Boston Interior" loading="lazy" width="1100" height="850" />
+          <img src="/images/furn-shelf.webp" alt="Custom oak shelving built by Boston Interior" loading="lazy" width="1100" height="850" />
         </div>
       </div>
     </section>
@@ -172,7 +168,7 @@ export default function FurniturePage() {
         <header className="flex items-start justify-between gap-4 border-b border-espresso/10 p-5">
           <div>
             <h2 id="inquiry-title" className="text-xl">Your Inquiry List</h2>
-            <p className="mt-1 text-sm text-espresso/80">Add pieces, then send us one enquiry.</p>
+            <p className="mt-1 text-sm text-espresso/80">Pick pieces and quantities, then send us one enquiry.</p>
           </div>
           <button id="inquiry-close" type="button" className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-espresso/15 text-espresso/80 transition hover:border-bronze hover:text-bronze" aria-label="Close inquiry list">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-5 w-5"><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -180,30 +176,16 @@ export default function FurniturePage() {
         </header>
         <div className="inquiry-body">
           <ul id="inquiry-items" className="inquiry-items"></ul>
-          <p id="inquiry-empty" className="inquiry-empty">Your list is empty. Tap “Add to Inquiry” on any piece below.</p>
-          <form id="inquiry-form" className="inquiry-form" noValidate hidden>
-            <input type="text" name="_gotcha" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
-            <div className="field">
-              <label className="field-label" htmlFor="inq-name">Full name *</label>
-              <input className="field-input" id="inq-name" name="name" type="text" placeholder="Your name" autoComplete="name" />
+          <p id="inquiry-empty" className="inquiry-empty">Your list is empty. Choose a quantity and tap “Add to Inquiry” on any piece.</p>
+          <div id="inquiry-summary" className="inquiry-summary" hidden>
+            <div className="inquiry-total">
+              <span>Total pieces</span>
+              <strong id="inquiry-total">0</strong>
             </div>
-            <div className="field">
-              <label className="field-label" htmlFor="inq-email">Email *</label>
-              <input className="field-input" id="inq-email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />
-            </div>
-            <div className="field">
-              <label className="field-label" htmlFor="inq-phone">Phone / WhatsApp *</label>
-              <input className="field-input" id="inq-phone" name="phone" type="tel" placeholder="+255 655 743 141" autoComplete="tel" />
-            </div>
-            <div className="field">
-              <label className="field-label" htmlFor="inq-message">Notes <span className="font-normal text-espresso/55">(optional)</span></label>
-              <textarea className="field-input" id="inq-message" name="message" rows={3} data-lenis-prevent placeholder="Sizes, finishes or questions..."></textarea>
-            </div>
-            <input type="hidden" id="inq-items-field" name="items" />
-            <button className="btn-primary w-full" type="submit">Submit Inquiry</button>
+            <a className="btn-primary w-full" href="/contact">Continue to Contact Us</a>
             <button id="inquiry-whatsapp" className="btn-outline w-full" type="button">Send via WhatsApp</button>
-            <div id="inquiry-status" className="hidden rounded-lg p-3 text-sm"></div>
-          </form>
+            <p className="inquiry-note">WhatsApp is optional. You can also submit these products through the Contact Us form.</p>
+          </div>
         </div>
       </aside>
     </div>

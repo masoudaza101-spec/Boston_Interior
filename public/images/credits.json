@@ -7,48 +7,6 @@
     "page": "https://www.pexels.com/photo/6583358/"
   },
   {
-    "name": "furn-chair",
-    "title": "Stylish armchair in a modern living room",
-    "creator": "Max Vakhtbovycn",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/6198655/"
-  },
-  {
-    "name": "furn-decor",
-    "title": "Ceramic vase decor on wooden table",
-    "creator": "Yaroslav Shuraev",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/7404957/"
-  },
-  {
-    "name": "furn-lamp",
-    "title": "Floor lamp beside modern furniture",
-    "creator": "Pixabay",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/12155608/"
-  },
-  {
-    "name": "furn-shelf",
-    "title": "Wooden shelving and bookcase",
-    "creator": "Max Vakhtbovycn",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/7195289/"
-  },
-  {
-    "name": "furn-sofa",
-    "title": "Modern grey sofa in sunlit room",
-    "creator": "Pixabay",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/16825059/"
-  },
-  {
-    "name": "furn-table",
-    "title": "Wooden coffee table in a living space",
-    "creator": "Mark Chan",
-    "license": "Pexels License",
-    "page": "https://www.pexels.com/photo/27164980/"
-  },
-  {
     "name": "hero-1",
     "title": "Stylish minimalist living room with warm lighting",
     "creator": "Vecislavas Popa",
@@ -208,5 +166,229 @@
     "creator": "Wilcle Nunes",
     "license": "Pexels License",
     "page": "https://www.pexels.com/photo/27059630/"
+  },
+  {
+    "name": "wood-ash",
+    "title": "Oak wood planks arm 8k (JPG).jpg",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3AOak%20wood%20planks%20arm%208k%20(JPG).jpg"
+  },
+  {
+    "name": "wood-oak",
+    "title": "Oak wood planks diff 8k (PNG).png",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3AOak%20wood%20planks%20diff%208k%20(PNG).png"
+  },
+  {
+    "name": "wood-teak",
+    "title": "Teak veneer diff 8k (JPG).jpg",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3ATeak%20veneer%20diff%208k%20(JPG).jpg"
+  },
+  {
+    "name": "wood-maple",
+    "title": "White maple veneer diff 8k (JPG).jpg",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWhite%20maple%20veneer%20diff%208k%20(JPG).jpg"
+  },
+  {
+    "name": "wood-cherry",
+    "title": "Cherry veneer diff 8k (JPG).jpg",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3ACherry%20veneer%20diff%208k%20(JPG).jpg"
+  },
+  {
+    "name": "wood-birch",
+    "title": "Stapled birch wood.jpg",
+    "creator": "Wikimedia Commons",
+    "license": "Public domain",
+    "page": "https://commons.wikimedia.org/wiki/File%3AStapled%20birch%20wood.jpg"
+  },
+  {
+    "name": "wood-cedar",
+    "title": "Japanese cedar planks (PNG).png",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3AJapanese%20cedar%20planks%20(PNG).png"
+  },
+  {
+    "name": "wood-beech",
+    "title": "Fallen beech leaves, Lidcombe Wood, Stanway - geograph.org.uk - 611410.jpg",
+    "creator": "Wikimedia Commons",
+    "license": "CC BY-SA 2.0",
+    "page": "https://commons.wikimedia.org/wiki/File%3AFallen%20beech%20leaves%2C%20Lidcombe%20Wood%2C%20Stanway%20-%20geograph.org.uk%20-%20611410.jpg"
+  },
+  {
+    "name": "wood-engineered",
+    "title": "Wood 005 plywood.jpg",
+    "creator": "Wikimedia Commons",
+    "license": "CC0",
+    "page": "https://commons.wikimedia.org/wiki/File%3AWood%20005%20plywood.jpg"
+  },
+  {
+    "name": "furn-sofa",
+    "title": "furn-sofa product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/31737838/"
+  },
+  {
+    "name": "furn-chair",
+    "title": "furn-chair product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/35033907/"
+  },
+  {
+    "name": "furn-table",
+    "title": "furn-table product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/15602699/"
+  },
+  {
+    "name": "furn-lamp",
+    "title": "furn-lamp product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/38986381/"
+  },
+  {
+    "name": "furn-shelf",
+    "title": "furn-shelf product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/31338030/"
+  },
+  {
+    "name": "furn-decor",
+    "title": "furn-decor product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/31493660/"
+  },
+  {
+    "name": "axis-sofa",
+    "title": "axis-sofa product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/37252552/"
+  },
+  {
+    "name": "noma-chair",
+    "title": "noma-chair product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/18688394/"
+  },
+  {
+    "name": "zenith-table",
+    "title": "zenith-table product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/38369494/"
+  },
+  {
+    "name": "halo-lamp",
+    "title": "halo-lamp product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/32684360/"
+  },
+  {
+    "name": "grid-shelf",
+    "title": "grid-shelf product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/27198456/"
+  },
+  {
+    "name": "form-decor",
+    "title": "form-decor product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/31846007/"
+  },
+  {
+    "name": "mat-oak",
+    "title": "mat-oak product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/35378675/"
+  },
+  {
+    "name": "mat-walnut",
+    "title": "mat-walnut product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/12277013/"
+  },
+  {
+    "name": "mat-teak",
+    "title": "mat-teak product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/34125692/"
+  },
+  {
+    "name": "mat-maple",
+    "title": "mat-maple product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/36718705/"
+  },
+  {
+    "name": "mat-ash",
+    "title": "mat-ash product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/36854079/"
+  },
+  {
+    "name": "mat-cherry",
+    "title": "mat-cherry product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/11112745/"
+  },
+  {
+    "name": "mat-mahogany",
+    "title": "mat-mahogany product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/189333/"
+  },
+  {
+    "name": "mat-birch",
+    "title": "mat-birch product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/7195588/"
+  },
+  {
+    "name": "mat-cedar",
+    "title": "mat-cedar product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/7195739/"
+  },
+  {
+    "name": "mat-beech",
+    "title": "mat-beech product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/34995610/"
+  },
+  {
+    "name": "mat-engineered",
+    "title": "mat-engineered product photo",
+    "creator": "Pexels",
+    "license": "Pexels License",
+    "page": "https://www.pexels.com/photo/38083081/"
   }
 ]

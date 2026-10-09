@@ -29,9 +29,9 @@ export default function HomePage() {
             Boston Interior designs warm, functional spaces, from first concept to the final styled
             detail, creating homes and workplaces that feel inviting, personal and timeless.
           </p>
-          <div className="flex flex-row items-stretch gap-3 md:col-span-6 md:col-start-7 md:justify-end md:gap-4" data-reveal>
-            <a className="btn-primary flex-1 justify-center whitespace-nowrap px-4 text-xs sm:px-7 sm:text-sm md:flex-none" href="/contact">Book a Consultation</a>
-            <a className="btn-ghost-light flex-1 justify-center whitespace-nowrap px-4 text-xs sm:px-7 sm:text-sm md:flex-none" href="/portfolio">View Our Portfolio</a>
+          <div className="mt-2 flex flex-col items-stretch gap-3 md:col-span-6 md:col-start-7 md:items-end md:gap-4" data-reveal>
+            <a className="btn-primary w-full justify-center whitespace-nowrap px-5 text-xs sm:px-7 sm:text-sm md:max-w-xs" href="/contact">Book a Consultation</a>
+            <a className="btn-ghost-light w-full justify-center whitespace-nowrap px-5 text-xs sm:px-7 sm:text-sm md:max-w-xs" href="/portfolio">View Our Portfolio</a>
           </div>
         </div>
       </div>

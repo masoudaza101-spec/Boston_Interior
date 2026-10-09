@@ -818,3 +818,215 @@ html.js .page-skeleton {
   border-top: 1px solid rgba(52, 31, 22, 0.1);
   padding-top: 1.25rem;
 }
+
+/* ===== Quantity steppers ===== */
+.qty-stepper {
+  display: inline-flex;
+  align-items: stretch;
+  flex: none;
+  overflow: hidden;
+  border: 1px solid rgba(52, 31, 22, 0.18);
+  border-radius: 0.6rem;
+  background: #fff;
+}
+.qty-btn {
+  display: flex;
+  width: 2.35rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  line-height: 1;
+  color: #341f16;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.qty-btn:hover {
+  background: #341f16;
+  color: #f0ebe5;
+}
+.qty-input {
+  width: 2.75rem;
+  min-width: 0;
+  border: 0;
+  border-left: 1px solid rgba(52, 31, 22, 0.12);
+  border-right: 1px solid rgba(52, 31, 22, 0.12);
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #341f16;
+  outline: none;
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+.qty-input::-webkit-outer-spin-button,
+.qty-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.qty-input:focus-visible {
+  box-shadow: inset 0 0 0 2px rgba(128, 82, 49, 0.4);
+}
+.qty-stepper-sm .qty-btn {
+  width: 1.85rem;
+  font-size: 0.95rem;
+}
+.qty-stepper-sm .qty-input {
+  width: 2.1rem;
+  font-size: 0.78rem;
+}
+
+/* ===== Wood species badge on product cards ===== */
+.wood-badge {
+  position: absolute;
+  left: 1rem;
+  top: 1rem;
+  z-index: 10;
+  border-radius: 9999px;
+  background: rgba(33, 19, 12, 0.82);
+  padding: 0.28rem 0.7rem;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+/* ===== Product page: clean, glossy product showcases ===== */
+.material-card {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 24px 48px -32px rgba(52, 31, 22, 0.55);
+  transition: box-shadow 0.4s ease, transform 0.4s ease, border-color 0.4s ease;
+}
+.material-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(128, 82, 49, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65), 0 34px 62px -32px rgba(52, 31, 22, 0.6);
+}
+.material-glare,
+.product-card .card-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 255, 255, 0.07) 24%,
+    rgba(255, 255, 255, 0) 46%
+  );
+  mix-blend-mode: screen;
+  opacity: 0.85;
+  transition: opacity 0.5s ease, transform 0.7s ease;
+}
+.material-card:hover .material-glare,
+.product-card:hover .card-media::after {
+  opacity: 1;
+  transform: translateX(6%) skewX(-6deg);
+}
+.product-card .card-media {
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+}
+
+/* ===== Inquiry drawer summary ===== */
+.inquiry-summary {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(52, 31, 22, 0.1);
+  padding-top: 1.25rem;
+}
+.inquiry-summary[hidden] {
+  display: none !important;
+}
+.inquiry-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: rgba(52, 31, 22, 0.75);
+}
+.inquiry-total strong {
+  font-size: 1.1rem;
+  color: #341f16;
+}
+.inquiry-note {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  text-align: center;
+  color: rgba(52, 31, 22, 0.62);
+}
+
+/* ===== Contact page product picker ===== */
+.product-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  max-height: 24rem;
+  overflow-y: auto;
+  padding: 3px;
+}
+.product-picker-loading {
+  font-size: 0.85rem;
+  color: rgba(52, 31, 22, 0.6);
+}
+.product-pick {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  border: 1px solid rgba(52, 31, 22, 0.14);
+  border-radius: 0.75rem;
+  background: #fff;
+  padding: 0.6rem 0.8rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.product-pick.is-picked {
+  border-color: #805231;
+  box-shadow: 0 0 0 3px rgba(128, 82, 49, 0.12);
+}
+.product-pick-check {
+  flex: none;
+  width: 1.25rem;
+  height: 1.25rem;
+  accent-color: #805231;
+  cursor: pointer;
+}
+.product-pick-body {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  cursor: pointer;
+}
+.product-pick-name {
+  font-weight: 600;
+  color: #341f16;
+  line-height: 1.3;
+}
+.product-pick-wood {
+  margin-left: 0.35rem;
+  border: 1px solid rgba(128, 82, 49, 0.4);
+  border-radius: 9999px;
+  padding: 0.05rem 0.5rem;
+  font-size: 0.63rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #805231;
+  white-space: nowrap;
+}
+.product-pick-meta {
+  font-size: 0.78rem;
+  color: rgba(52, 31, 22, 0.72);
+  line-height: 1.4;
+}
+@media (max-width: 520px) {
+  .product-pick {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+  .product-pick-body {
+    flex-basis: calc(100% - 2.1rem);
+  }
+  .product-pick .qty-stepper {
+    margin-left: 2.1rem;
+  }
+}

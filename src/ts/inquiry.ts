@@ -1,34 +1,18 @@
 import $ from "jquery";
+import {
+  clampQty,
+  countItems,
+  formatItemLines,
+  hasItem,
+  loadItems,
+  removeItem,
+  saveItems,
+  setItemQty,
+  upsertItem,
+  type InquiryItem
+} from "./inquiry-store";
 
-const FORMSPREE_ENDPOINT: string = process.env.NEXT_PUBLIC_FORMSPREE_ENDPOINT || "";
-const STORE_KEY = "bi_inquiry_v1";
 const WA_NUMBER = "17708994600";
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
-
-interface Item {
-  id: string;
-  name: string;
-  meta: string;
-  image: string;
-}
-
-function load(): Item[] {
-  try {
-    const raw = window.localStorage.getItem(STORE_KEY);
-    const parsed = raw ? (JSON.parse(raw) as unknown) : [];
-    return Array.isArray(parsed) ? (parsed as Item[]) : [];
-  } catch {
-    return [];
-  }
-}
-
-function save(items: Item[]): void {
-  try {
-    window.localStorage.setItem(STORE_KEY, JSON.stringify(items));
-  } catch {
-    /* storage unavailable */
-  }
-}
 
 function esc(value: string): string {
   return value.replace(/[&<>"']/g, (c) =>
@@ -44,13 +28,12 @@ $(() => {
   const $count = $("#inquiry-count");
   const $list = $("#inquiry-items");
   const $empty = $("#inquiry-empty");
-  const $form = $("#inquiry-form");
-  const $itemsField = $("#inq-items-field");
-  const $status = $("#inquiry-status");
+  const $summary = $("#inquiry-summary");
+  const $total = $("#inquiry-total");
 
-  let items: Item[] = load();
+  let items: InquiryItem[] = loadItems();
 
-  const productOf = (id: string): Item | null => {
+  const productOf = (id: string): InquiryItem | null => {
     const el = document.querySelector<HTMLElement>(
       `.product-card[data-product-id="${id}"]`
     );
@@ -59,16 +42,15 @@ $(() => {
       id,
       name: el.dataset.productName || id,
       meta: el.dataset.productMeta || "",
-      image: el.dataset.productImage || ""
+      image: el.dataset.productImage || "",
+      qty: 1
     };
   };
-
-  const has = (id: string): boolean => items.some((i) => i.id === id);
 
   const syncButtons = (): void => {
     $(".add-to-inquiry").each(function () {
       const id = $(this).closest(".product-card").data("product-id") as string;
-      const active = has(id);
+      const active = hasItem(items, id);
       $(this)
         .toggleClass("is-added", active)
         .text(active ? "Added to Inquiry" : "Add to Inquiry")
@@ -76,20 +58,34 @@ $(() => {
     });
   };
 
-  const render = (): void => {
+  const syncCardInputs = (): void => {
+    $(".product-card").each(function () {
+      const $card = $(this);
+      const id = $card.data("product-id") as string;
+      const item = items.find((i) => i.id === id);
+      if (item) $card.find(".qty-input").val(String(item.qty));
+    });
+  };
+
+  const syncTotals = (): void => {
     const n = items.length;
+    const pieces = countItems(items);
     if (n) $count.text(String(n)).removeAttr("hidden");
     else $count.attr("hidden", "hidden");
-
+    $total.text(String(pieces));
     $toggle.attr("aria-label", `Open inquiry list (${n} item${n === 1 ? "" : "s"})`);
+  };
+
+  const render = (): void => {
+    syncTotals();
 
     $list.empty();
-    if (!n) {
+    if (!items.length) {
       $empty.removeAttr("hidden");
-      $form.attr("hidden", "hidden");
+      $summary.attr("hidden", "hidden");
     } else {
       $empty.attr("hidden", "hidden");
-      $form.removeAttr("hidden");
+      $summary.removeAttr("hidden");
       items.forEach((it) => {
         $list.append(
           `<li class="inquiry-item" data-id="${esc(it.id)}">
@@ -97,6 +93,11 @@ $(() => {
              <div class="inquiry-text">
                <p class="inquiry-name">${esc(it.name)}</p>
                <p class="inquiry-meta">${esc(it.meta)}</p>
+               <div class="qty-stepper qty-stepper-sm" role="group" aria-label="Quantity for ${esc(it.name)}">
+                 <button type="button" class="qty-btn" data-qty="-1" aria-label="Decrease quantity for ${esc(it.name)}">−</button>
+                 <input class="qty-input" type="number" min="1" max="99" inputmode="numeric" value="${it.qty}" aria-label="Quantity for ${esc(it.name)}" />
+                 <button type="button" class="qty-btn" data-qty="1" aria-label="Increase quantity for ${esc(it.name)}">+</button>
+               </div>
              </div>
              <button type="button" class="inquiry-remove" aria-label="Remove ${esc(it.name)}">
                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M18 6 6 18M6 6l12 12"/></svg>
@@ -104,9 +105,9 @@ $(() => {
            </li>`
         );
       });
-      $itemsField.val(items.map((i) => i.name).join(", "));
     }
     syncButtons();
+    syncCardInputs();
   };
 
   const openDrawer = (): void => {
@@ -121,19 +122,11 @@ $(() => {
   };
 
   const buildMessage = (): string =>
-    items.map((i, k) => `${k + 1}. ${i.name} — ${i.meta}`).join("\n");
-
-  const showStatus = (kind: "success" | "error", html: string): void => {
-    const tone =
-      kind === "success"
-        ? "border border-green-200 bg-green-50 text-green-800"
-        : "border border-red-200 bg-red-50 text-red-800";
-    $status.attr("class", `rounded-lg p-3 text-sm ${tone}`).html(html).removeClass("hidden");
-  };
+    formatItemLines(items);
 
   const openWhatsApp = (): void => {
     if (!items.length) return;
-    const text = `Hi Boston Interior, I'd like to enquire about these pieces:\n\n${buildMessage()}`;
+    const text = `Hi Boston Interior, I'd like to enquire about these pieces:\n\n${buildMessage()}\n\nPlease confirm pricing, materials and delivery.`;
     window.open(
       `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`,
       "_blank",
@@ -147,84 +140,59 @@ $(() => {
     if (e.key === "Escape" && $drawer.hasClass("open")) closeDrawer();
   });
 
+  const applyStepper = ($stepper: JQuery<HTMLElement>): void => {
+    const $input = $stepper.find(".qty-input");
+    const qty = clampQty(Number($input.val()));
+    $input.val(String(qty));
+
+    const $item = $stepper.closest(".inquiry-item");
+    const $card = $stepper.closest(".product-card");
+    const id = ($item.length ? $item.data("id") : $card.data("product-id")) as string;
+    if (!id || !hasItem(items, id)) return;
+    items = setItemQty(items, id, qty);
+    saveItems(items);
+    syncTotals();
+    $card.find(".qty-input").val(String(qty));
+  };
+
+  $(document).on("click", ".qty-btn", function () {
+    const $stepper = $(this).closest(".qty-stepper");
+    const $input = $stepper.find(".qty-input");
+    const delta = Number($(this).data("qty")) || 0;
+    $input.val(String(clampQty(Number($input.val()) + delta)));
+    applyStepper($stepper);
+  });
+
+  $(document).on("change", ".qty-input", function () {
+    applyStepper($(this).closest(".qty-stepper"));
+  });
+
   $(document).on("click", ".add-to-inquiry", function () {
-    const id = $(this).closest(".product-card").data("product-id") as string;
+    const $card = $(this).closest(".product-card");
+    const id = $card.data("product-id") as string;
     if (!id) return;
-    if (has(id)) {
-      items = items.filter((i) => i.id !== id);
-    } else {
-      const product = productOf(id);
-      if (product) items.push(product);
+    if (hasItem(items, id)) {
+      items = removeItem(items, id);
+      saveItems(items);
+      render();
+      return;
     }
-    save(items);
+    const product = productOf(id);
+    if (!product) return;
+    product.qty = clampQty(Number($card.find(".qty-input").val()));
+    items = upsertItem(items, product);
+    saveItems(items);
     render();
   });
 
   $(document).on("click", ".inquiry-remove", function () {
     const id = $(this).closest(".inquiry-item").data("id") as string;
-    items = items.filter((i) => i.id !== id);
-    save(items);
+    items = removeItem(items, id);
+    saveItems(items);
     render();
   });
 
   $("#inquiry-whatsapp").on("click", openWhatsApp);
-
-  $form.on("submit", async (e) => {
-    e.preventDefault();
-    if (!items.length) return;
-
-    const name = (($("#inq-name").val() as string) || "").trim();
-    const email = (($("#inq-email").val() as string) || "").trim();
-    const phone = (($("#inq-phone").val() as string) || "").trim();
-    const notes = (($("#inq-message").val() as string) || "").trim();
-
-    if (name.length < 2 || !EMAIL_RE.test(email) || phone.replace(/\D/g, "").length < 6) {
-      showStatus("error", "Please add your name, a valid email address and a phone number.");
-      return;
-    }
-
-    if (!FORMSPREE_ENDPOINT || FORMSPREE_ENDPOINT.includes("REPLACE")) {
-      showStatus(
-        "error",
-        'The form is not connected yet. Use <button type="button" id="inquiry-whatsapp-inline" class="font-semibold underline">Send via WhatsApp</button> or call +255 655 743 141.'
-      );
-      $("#inquiry-whatsapp-inline").on("click", openWhatsApp);
-      return;
-    }
-
-    const $btn = $form.find("button[type=submit]");
-    $btn.prop("disabled", true).text("Sending...");
-
-    const data = new FormData();
-    data.append("name", name);
-    data.append("email", email);
-    data.append("phone", phone);
-    data.append("project-type", "Products enquiry");
-    data.append("items", items.map((i) => i.name).join(", "));
-    data.append("message", `${notes ? notes + "\n\n" : ""}Products enquiry:\n${buildMessage()}`);
-
-    try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
-        method: "POST",
-        body: data,
-        headers: { Accept: "application/json" }
-      });
-      if (res.ok) {
-        items = [];
-        save(items);
-        ($form[0] as HTMLFormElement).reset();
-        render();
-        closeDrawer();
-        window.alert("Thank you! Your enquiry has been sent. We will get back to you within one business day.");
-      } else {
-        showStatus("error", "Something went wrong. Please try again or reach us on WhatsApp.");
-      }
-    } catch {
-      showStatus("error", "Network error. Please check your connection and try again.");
-    } finally {
-      $btn.prop("disabled", false).text("Submit Inquiry");
-    }
-  });
 
   render();
 });

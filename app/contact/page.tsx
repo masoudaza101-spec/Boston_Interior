@@ -54,9 +54,19 @@ export default function ContactPage() {
             </div>
 
             <div className="field">
-              <label className="field-label" htmlFor="phone">Phone / WhatsApp *</label>
+              <label className="field-label" htmlFor="phone">Phone number *</label>
               <input className="field-input" type="tel" id="phone" name="phone" placeholder="+255 655 743 141" autoComplete="tel" required />
               <p className="field-error">Please enter a valid phone number.</p>
+            </div>
+
+            <div className="field">
+              <label className="field-label" htmlFor="preferred-contact">Preferred contact method</label>
+              <select className="field-input" id="preferred-contact" name="preferred-contact">
+                <option value="email">Email</option>
+                <option value="phone">Phone call</option>
+                <option value="whatsapp">WhatsApp (optional)</option>
+              </select>
+              <p className="mt-1 text-xs text-espresso/60">WhatsApp is optional, pick it only if you would like a reply on WhatsApp.</p>
             </div>
 
             <div className="field">
@@ -73,7 +83,7 @@ export default function ContactPage() {
               <p className="field-error">Please choose a project type.</p>
             </div>
 
-            <div className="field sm:col-span-2">
+            <div className="field">
               <label className="field-label" htmlFor="budget">Budget range <span className="font-normal text-espresso/55">(optional)</span></label>
               <select className="field-input" id="budget" name="budget">
                 <option value="">Select a range</option>
@@ -83,6 +93,19 @@ export default function ContactPage() {
                 <option value="15k-plus">USD 15,000+</option>
                 <option value="discuss">Prefer to discuss</option>
               </select>
+            </div>
+
+            <div className="field sm:col-span-2">
+              <div className="flex flex-wrap items-center justify-between gap-2">
+                <span className="field-label mb-0" id="product-picker-label">Products of interest <span className="font-normal text-espresso/55">(optional, select multiple)</span></span>
+                <span id="picker-count" className="text-xs font-semibold text-bronze">0 pieces selected</span>
+              </div>
+              <div id="product-picker" className="product-picker mt-2" role="group" aria-labelledby="product-picker-label">
+                <p className="product-picker-loading">Loading products…</p>
+              </div>
+              <p className="mt-1 text-xs text-espresso/60">Select the pieces you like and set a quantity for each. Prices are confirmed by quote.</p>
+              <input type="hidden" id="products-field" name="products" />
+              <input type="hidden" id="products-count" name="products-count" value="0" />
             </div>
 
             <div className="field sm:col-span-2">
